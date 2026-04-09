@@ -1,18 +1,14 @@
 # CLAUDE.md - AI Assistant Guide
 
-> This file provides guidance for AI assistants working with this repository.
+> Instructions for AI assistants working with the `reem20050/-` repository.
 
 ## Project Overview
 
 **Repository:** reem20050/-
-**Status:** Newly initialized repository
-**Last Updated:** 2026-02-03
+**Status:** Empty / newly initialized
+**Last Updated:** 2026-04-09
 
-<!-- TODO: Update this section when the project is set up -->
-This repository is currently being set up. Update this section with:
-- Project name and description
-- Primary purpose and goals
-- Target users/audience
+This repository is freshly created and contains no source code, configuration files, or documentation beyond this file. It is a blank slate awaiting its first project setup.
 
 ## Repository Structure
 
@@ -22,24 +18,11 @@ This repository is currently being set up. Update this section with:
 └── .git/              # Git repository metadata
 ```
 
-<!-- TODO: Update the structure as files are added -->
-<!-- Example structure for a typical project:
-├── src/               # Source code
-├── tests/             # Test files
-├── docs/              # Documentation
-├── config/            # Configuration files
-├── scripts/           # Build/deployment scripts
-├── package.json       # Dependencies (Node.js)
-└── README.md          # Project documentation
--->
+No source code, tests, build configuration, or other files exist yet.
 
 ## Technology Stack
 
-<!-- TODO: Update when technologies are chosen -->
-- **Language:** TBD
-- **Framework:** TBD
-- **Build Tool:** TBD
-- **Testing:** TBD
+Not yet determined. No `package.json`, `requirements.txt`, `Cargo.toml`, `go.mod`, or any other dependency/build file is present.
 
 ## Development Workflow
 
@@ -47,86 +30,68 @@ This repository is currently being set up. Update this section with:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-
-# Navigate to project directory
+git clone https://github.com/reem20050/-.git
 cd -
-
-# Install dependencies (update based on project type)
-# npm install        # Node.js
-# pip install -r requirements.txt  # Python
-# bundle install     # Ruby
 ```
 
-### Common Commands
+### Branching Convention
 
-<!-- TODO: Add actual commands when the project is set up -->
-| Command | Description |
-|---------|-------------|
-| `npm start` | Start development server |
-| `npm test` | Run tests |
-| `npm run build` | Build for production |
-| `npm run lint` | Run linter |
+The repository uses feature branches with the pattern `claude/<description>`. There is no `main` or `master` branch — the initial commit lives directly on feature branches.
+
+Existing branches:
+- `claude/add-claude-documentation-XWjVG`
+- `claude/claude-md-ml6sii2bjfqykh6n-3kRgl`
+
+Both branches point to the same single commit.
 
 ## Code Conventions
 
-### General Guidelines
+No conventions are established yet since no code exists. When the project is set up, update this section with:
 
-1. **Code Style**
-   - Follow the project's established coding style
-   - Use meaningful variable and function names
-   - Keep functions small and focused
+- Language-specific style guide
+- Naming conventions for files, variables, and functions
+- Formatting / linting tool configuration
+- Import ordering rules
 
-2. **Comments**
-   - Write self-documenting code when possible
-   - Add comments for complex logic
-   - Keep comments up-to-date with code changes
+### Git Workflow
 
-3. **Git Workflow**
-   - Use descriptive commit messages
-   - Create feature branches for new work
-   - Keep commits atomic and focused
-
-### File Naming
-
-<!-- TODO: Define naming conventions -->
-- Use lowercase with hyphens for file names (e.g., `my-component.js`)
-- Use PascalCase for component files (e.g., `MyComponent.tsx`)
-- Use camelCase for utility files (e.g., `helpers.js`)
+- Use descriptive commit messages
+- Create feature branches for new work
+- Keep commits atomic and focused
+- Do not commit secrets (API keys, passwords, `.env` files)
 
 ## Testing
 
-### Running Tests
+No test framework is configured. When tests are added, document:
 
-```bash
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run specific test file
-npm test -- path/to/test
-```
-
-### Test Conventions
-
-- Place test files next to source files or in a `tests/` directory
-- Name test files with `.test.` or `.spec.` suffix
-- Write descriptive test names that explain the expected behavior
+- How to run the full test suite
+- How to run a single test
+- Test file naming and placement conventions
 
 ## Important Files
 
 | File | Purpose |
 |------|---------|
 | `CLAUDE.md` | AI assistant guide (this file) |
-| `README.md` | Project documentation |
-| `package.json` | Dependencies and scripts |
-| `.env.example` | Environment variable template |
+
+No other files exist in the repository.
 
 ## AI Assistant Instructions
 
-### When Working on This Codebase
+### Current State Awareness
+
+This repository is empty. Any task will involve creating files from scratch rather than modifying existing code. There are no established patterns to follow yet.
+
+### When Setting Up the Project
+
+1. Ask or confirm what language/framework the project will use
+2. Initialize the appropriate project structure (e.g., `npm init`, `cargo init`, etc.)
+3. Set up linting and formatting from the start
+4. Add a `.gitignore` appropriate for the chosen stack
+5. Create a `README.md` with basic project info
+6. Update this `CLAUDE.md` to reflect the chosen stack and conventions
+
+### General Guidelines
 
 1. **Before making changes:**
    - Read relevant source files to understand context
@@ -147,31 +112,13 @@ npm test -- path/to/test
 
 - Don't introduce new patterns without discussion
 - Don't modify code style in unchanged files
-- Don't commit sensitive data (API keys, passwords)
+- Don't commit sensitive data (API keys, passwords, tokens)
 - Don't skip tests or linting checks
-
-### Helpful Context
-
-<!-- TODO: Add project-specific context -->
-- Key architectural decisions
-- Known issues or limitations
-- Areas of the codebase to be careful with
-- Performance considerations
+- Don't add placeholder/boilerplate content that doesn't reflect reality
 
 ## Contributing
 
-1. Create a feature branch from the main branch
-2. Make your changes following the conventions above
-3. Ensure all tests pass
+1. Create a feature branch from the base branch
+2. Make changes following the conventions above
+3. Ensure all tests pass (when tests exist)
 4. Submit a pull request with a clear description
-
-## Resources
-
-<!-- TODO: Add relevant links -->
-- [Project Documentation](./docs/)
-- [Issue Tracker](#)
-- [Team Wiki](#)
-
----
-
-*This CLAUDE.md file was created as a template. Update it as the project develops to provide accurate guidance for AI assistants working with this codebase.*

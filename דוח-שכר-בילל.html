@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>דוח שכר עבודה - בילל</title>
+<style>
+  @page { size: A4; margin: 2cm; }
+  body {
+    font-family: "Arial", "David", "Times New Roman", sans-serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.7;
+    color: #222;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+  }
+  h1 {
+    text-align: center;
+    color: #1a4b8c;
+    border-bottom: 3px double #1a4b8c;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    font-size: 28pt;
+  }
+  h2 {
+    color: #1a4b8c;
+    border-right: 4px solid #1a4b8c;
+    padding-right: 10px;
+    margin-top: 30px;
+    font-size: 18pt;
+  }
+  h3 {
+    color: #2a6cb0;
+    font-size: 14pt;
+    margin-top: 20px;
+  }
+  .header-info {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 11pt;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 11pt;
+  }
+  th, td {
+    border: 1px solid #8aa4c8;
+    padding: 8px 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #1a4b8c;
+    color: white;
+    font-weight: bold;
+  }
+  tr:nth-child(even) { background-color: #f0f5fc; }
+  tr:hover { background-color: #e1ebf7; }
+  .total-row {
+    background-color: #d4e4f7 !important;
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  .grand-total {
+    background-color: #1a4b8c !important;
+    color: white;
+    font-size: 14pt;
+  }
+  .summary-box {
+    background: linear-gradient(135deg, #e8f1fb, #d4e4f7);
+    border: 2px solid #1a4b8c;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 8px;
+  }
+  .summary-box .big {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #1a4b8c;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  .signature-block {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .signature {
+    width: 45%;
+    border-top: 1px solid #000;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 11pt;
+  }
+  .check-ok { color: #1a7a3c; font-weight: bold; }
+  .role-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .role-inspector { background: #fbe6d4; color: #8c4a1a; }
+  .role-arranger { background: #d4e6fb; color: #1a4b8c; }
+  .note {
+    background: #fff9e6;
+    border-right: 4px solid #d4a800;
+    padding: 10px 15px;
+    margin: 15px 0;
+    font-size: 10pt;
+  }
+  .metadata {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 10pt;
+  }
+  .metadata td { text-align: right; padding: 4px 8px; border: none; }
+  .metadata th { text-align: right; background: #d0d0d0; color: #333; padding: 4px 8px; border: none; }
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #888;
+    font-size: 9pt;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+  }
+  @media print {
+    body { padding: 10px; }
+    h2 { page-break-after: avoid; }
+    table { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>דוח שכר עבודה</h1>
+<div class="header-info">
+  מסמך מפורט לחישוב תשלום עבור שירותי סידור ובדיקה
+</div>
+
+<h2>פרטי המסמך</h2>
+<table class="metadata">
+  <tr><th>שם העובד / הספק:</th><td>בילל</td></tr>
+  <tr><th>סוג המסמך:</th><td>דוח שעות ותשלום</td></tr>
+  <tr><th>תאריך הפקה:</th><td>21 באפריל 2026</td></tr>
+  <tr><th>תקופת הדיווח:</th><td>8 ימי עבודה</td></tr>
+  <tr><th>מספר תפקידים:</th><td>2 (סדרנים, בודקים)</td></tr>
+  <tr><th>סוג התעריף:</th><td>תעריף אחיד — ללא שעות נוספות</td></tr>
+</table>
+
+<h2>1. תעריפי שכר</h2>
+<table>
+  <thead>
+    <tr>
+      <th>תפקיד</th>
+      <th>תעריף לשעה (₪)</th>
+      <th>מאפיינים</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="role-badge role-arranger">סדרנים</span></td>
+      <td>110 ₪</td>
+      <td>תפקיד ארגוני / לוגיסטי</td>
+    </tr>
+    <tr>
+      <td><span class="role-badge role-inspector">בודקים</span></td>
+      <td>150 ₪</td>
+      <td>תפקיד מקצועי / בקרת איכות</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>2. פירוט ימי העבודה</h2>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>תפקיד</th>
+      <th>מס' עובדים</th>
+      <th>שעות ליום</th>
+      <th>תעריף (₪)</th>
+      <th>סה"כ שעות</th>
+      <th>סה"כ ₪</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><span class="role-badge role-arranger">סדרנים</span></td>
+      <td>10</td>
+      <td>10</td>
+      <td>110</td>
+      <td>100</td>
+      <td>11,000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><span class="role-badge role-inspector">בודקים</span></td>
+      <td>7</td>
+      <td>8</td>
+      <td>150</td>
+      <td>56</td>
+      <td>8,400</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><span class="role-badge role-arranger">סדרנים</span></td>
+      <td>3</td>
+      <td>8</td>
+      <td>110</td>
+      <td>24</td>
+      <td>2,640</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><span class="role-badge role-inspector">בודקים</span></td>
+      <td>5</td>
+      <td>8</td>
+      <td>150</td>
+      <td>40</td>
+      <td>6,000</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><span class="role-badge role-arranger">סדרנים</span></td>
+      <td>5</td>
+      <td>8</td>
+      <td>110</td>
+      <td>40</td>
+      <td>4,400</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><span class="role-badge role-inspector">בודקים</span></td>
+      <td>1</td>
+      <td>8</td>
+      <td>150</td>
+      <td>8</td>
+      <td>1,200</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><span class="role-badge role-inspector">בודקים</span></td>
+      <td>17</td>
+      <td>9</td>
+      <td>150</td>
+      <td>153</td>
+      <td>22,950</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><span class="role-badge role-arranger">סדרנים</span></td>
+      <td>18</td>
+      <td>9</td>
+      <td>110</td>
+      <td>162</td>
+      <td>17,820</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. סיכום לפי תפקיד</h2>
+
+<h3>בודקים (תעריף: 150 ₪/שעה)</h3>
+<table>
+  <thead>
+    <tr><th>יום</th><th>שעות</th><th>חישוב</th><th>סכום (₪)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2</td><td>56</td><td>56 × 150</td><td>8,400</td></tr>
+    <tr><td>4</td><td>40</td><td>40 × 150</td><td>6,000</td></tr>
+    <tr><td>6</td><td>8</td><td>8 × 150</td><td>1,200</td></tr>
+    <tr><td>7</td><td>153</td><td>153 × 150</td><td>22,950</td></tr>
+    <tr class="total-row"><td colspan="2">סה"כ: 257 שעות</td><td>257 × 150</td><td>38,550 ₪</td></tr>
+  </tbody>
+</table>
+
+<h3>סדרנים (תעריף: 110 ₪/שעה)</h3>
+<table>
+  <thead>
+    <tr><th>יום</th><th>שעות</th><th>חישוב</th><th>סכום (₪)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>100</td><td>100 × 110</td><td>11,000</td></tr>
+    <tr><td>3</td><td>24</td><td>24 × 110</td><td>2,640</td></tr>
+    <tr><td>5</td><td>40</td><td>40 × 110</td><td>4,400</td></tr>
+    <tr><td>8</td><td>162</td><td>162 × 110</td><td>17,820</td></tr>
+    <tr class="total-row"><td colspan="2">סה"כ: 326 שעות</td><td>326 × 110</td><td>35,860 ₪</td></tr>
+  </tbody>
+</table>
+
+<h2>4. סה"כ כללי לתשלום</h2>
+<table>
+  <thead>
+    <tr><th>תפקיד</th><th>סה"כ שעות</th><th>סה"כ לתשלום (₪)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>בודקים</td><td>257</td><td>38,550</td></tr>
+    <tr><td>סדרנים</td><td>326</td><td>35,860</td></tr>
+    <tr class="grand-total"><td>סה"כ כללי</td><td>583 שעות</td><td>74,410 ₪</td></tr>
+  </tbody>
+</table>
+
+<div class="summary-box">
+  <div style="text-align:center; font-size:14pt;">סכום סופי לתשלום</div>
+  <span class="big">74,410 ₪</span>
+  <div style="text-align:center; font-size:10pt; color:#555; margin-top:8px;">
+    (שבעים וארבעה אלף ארבע מאות ועשר שקלים חדשים)
+  </div>
+</div>
+
+<h2>5. נתונים סטטיסטיים</h2>
+<table>
+  <thead>
+    <tr><th>מדד</th><th>ערך</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>סה"כ שעות עבודה</td><td>583 שעות</td></tr>
+    <tr><td>אחוז שעות סדרנים</td><td>55.9% (326/583)</td></tr>
+    <tr><td>אחוז שעות בודקים</td><td>44.1% (257/583)</td></tr>
+    <tr><td>אחוז עלות סדרנים</td><td>48.2% (35,860/74,410)</td></tr>
+    <tr><td>אחוז עלות בודקים</td><td>51.8% (38,550/74,410)</td></tr>
+    <tr><td>תעריף ממוצע משוקלל לשעה</td><td>127.63 ₪</td></tr>
+    <tr><td>עלות ממוצעת ליום עבודה</td><td>9,301.25 ₪</td></tr>
+    <tr><td>היום היקר ביותר</td><td>יום 7 — 22,950 ₪</td></tr>
+    <tr><td>היום הזול ביותר</td><td>יום 6 — 1,200 ₪</td></tr>
+  </tbody>
+</table>
+
+<h2>6. אימות חישובים</h2>
+<p>
+  כל 8 שורות החישוב נבדקו פרטנית ואומתו הן מבחינת סך השעות והן מבחינת סך התשלום.
+  הסיכומים המצטברים לפי תפקיד (257 בודקים, 326 סדרנים) תואמים לסיכום המפורט,
+  וסך הסכום הכולל (74,410 ₪) מאוזן במדויק.
+</p>
+
+<table>
+  <thead>
+    <tr><th>פריט בדיקה</th><th>סטטוס</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>חישובי שעות בכל 8 השורות</td><td class="check-ok">✓ תקין</td></tr>
+    <tr><td>חישובי תשלום בכל 8 השורות</td><td class="check-ok">✓ תקין</td></tr>
+    <tr><td>סיכום שעות בודקים (257)</td><td class="check-ok">✓ תקין</td></tr>
+    <tr><td>סיכום שעות סדרנים (326)</td><td class="check-ok">✓ תקין</td></tr>
+    <tr><td>סיכום תשלום בודקים (38,550 ₪)</td><td class="check-ok">✓ תקין</td></tr>
+    <tr><td>סיכום תשלום סדרנים (35,860 ₪)</td><td class="check-ok">✓ תקין</td></tr>
+    <tr><td>סכום כולל (74,410 ₪)</td><td class="check-ok">✓ תקין</td></tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>הערה:</strong> התעריף במסמך הוא אחיד לכל השעות, ללא תוספת שעות נוספות.
+  החישוב בוצע לפי הסכם מוסכם מראש בין הצדדים.
+</div>
+
+<h2>7. הצהרה</h2>
+<p>
+  אני הח"מ, <strong>בילל</strong>, מאשר/ת כי הנתונים המופיעים במסמך זה משקפים
+  את העבודה שבוצעה בפועל, וכי הסכום הכולל לתשלום עומד על <strong>74,410 ₪</strong>.
+  החישוב נעשה בהתאם לתעריפים המוסכמים: 150 ₪/שעה לבודקים ו-110 ₪/שעה לסדרנים.
+</p>
+
+<div class="signature-block">
+  <div class="signature">
+    חתימת העובד / הספק<br>
+    <span style="color:#888; font-size:9pt;">____________________</span>
+  </div>
+  <div class="signature">
+    חתימת המזמין<br>
+    <span style="color:#888; font-size:9pt;">____________________</span>
+  </div>
+</div>
+
+<footer>
+  מסמך זה הופק ב-21 באפריל 2026 | סכום סופי: 74,410 ₪ | 583 שעות עבודה | 8 ימי עבודה
+</footer>
+
+</body>
+</html>

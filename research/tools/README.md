@@ -40,3 +40,28 @@ python straddle_ev.py mc        --premium 16.3 --cost 0.4 -p 0.75 --hit-mean 35 
   `straddle_ev_mc`, `kelly_fraction`) ניתנות לייבוא כמודול: `from straddle_ev import straddle_ev`.
 - לחיבור ל-backtest אמיתי (מסמך `../07-backtesting.md`): הזן `premium` ו-`cost` מ-quotes אמיתיים
   (ask בכניסה, bid ביציאה), והשווה את `mean net PnL` של ה-backtest ל-EV התיאורטי.
+
+---
+
+# optimize_threshold_horizon.py — Optuna על threshold ו-horizon
+
+חיפוש Optuna על `(X, N)` שבנוי **לעמוד בפני overfitting**. שני עקרונות מובנים:
+1. **האובייקטיב = P&L נטו OOS אחרי עלויות (Sharpe/net_ev/Calmar)** — לא precision.
+2. **הגנות overfitting בכל שכבה:** walk-forward + embargo בתוך כל trial; הסף בפרמטר **σ-units**
+   (`X = k · implied_move(N)` — מנתק את צימוד `X ~ √N`); **Deflated Sharpe** מול מספר ה-trials;
+   בדיקת **plateau** (האופטימום חייב להיות מוקף בשכנים טובים); ו-**holdout** ש-Optuna לא רואה.
+
+**להרצה (דמו סינתטי — נתונים מזויפים, להדגמת המנגנון):**
+```bash
+pip install optuna numpy pandas
+python optimize_threshold_horizon.py --demo --trials 60 --objective sharpe
+```
+
+**לשימוש אמיתי — שני hooks למלא (מסומנים `# === PLUG IN ===`):**
+- `predicted_move(df, horizon_min)` — פלט המודל שלך (תחזית `|move|` לחלון). מודל מגניטודה/quantile
+  (מסמך `../04`) חוסך אימון מחדש לכל X. classifier בינארי → אמן מחדש כאן ו-cache.
+- `straddle_pnl_from_quotes(entry_ts, horizon_min, ctx)` — P&L נטו מ-**quotes אמיתיים** (קנה ב-ask,
+  מכור ב-bid, פחות עמלות). זו הדרך **היחידה** לתפוס theta/gamma/IV-crush/spread אמיתיים; ה-IV
+  המודלי הוא fallback ל-wiring בלבד, לא להחלטות.
+
+**פלט:** הפרמטרים הטובים, יציבות plateau, מדדי holdout, ו-DSR (>0.95 = כנראה אמיתי; <0.9 = כנראה רעש).

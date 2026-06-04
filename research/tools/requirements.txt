@@ -1,0 +1,7 @@
+# straddle_ev.py uses the Python standard library only — no install needed.
+# Requires Python 3.9+ (uses from __future__ import annotations, dataclasses, math.erf).
+#
+# Optional, only if you extend the tool toward a real backtest (see ../07-backtesting.md):
+# numpy>=1.24        # vectorized Monte-Carlo / array math
+# pandas>=2.0        # options quote panels, time alignment
+# scipy>=1.10        # alternative normal CDF / optimization

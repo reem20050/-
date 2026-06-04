@@ -1,0 +1,12 @@
+# Core (required)
+numpy>=1.26
+pandas>=2.0
+
+# Charts (optional, for scripts/run_backtest.py --plot)
+matplotlib>=3.7
+
+# Live data (optional; blocked in the Claude Code web sandbox -> use CSV instead)
+yfinance>=0.2
+
+# Tests
+pytest>=7.0

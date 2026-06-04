@@ -5,41 +5,42 @@
 ## Project Overview
 
 **Repository:** reem20050/-
-**Status:** Newly initialized repository
-**Last Updated:** 2026-02-03
+**Status:** Active — SFP research toolkit
+**Last Updated:** 2026-06-04
 
-<!-- TODO: Update this section when the project is set up -->
-This repository is currently being set up. Update this section with:
-- Project name and description
-- Primary purpose and goals
-- Target users/audience
+**SFP Research** is a Python backtesting/research toolkit for investigating the
+*Swing Failure Signals [AlgoAlpha]* TradingView (Pine v6) indicator. It contains
+a faithful Python port of the indicator's bar-by-bar logic plus a backtest
+engine, performance metrics, parameter sweep, and plotting — so the system can
+be evaluated on real (CSV/yfinance) or synthetic OHLC data.
+
+See [`README.md`](./README.md) for the full system explanation and workflow.
 
 ## Repository Structure
 
 ```
 /
 ├── CLAUDE.md          # This file - AI assistant guide
-└── .git/              # Git repository metadata
+├── README.md          # System explanation + research workflow (Hebrew)
+├── requirements.txt
+├── sfp/               # Library package
+│   ├── indicator.py   # Faithful Pine port -> signals
+│   ├── data.py        # CSV / yfinance / synthetic OHLC loaders
+│   ├── backtest.py    # Event-driven backtest engine
+│   ├── metrics.py     # Performance metrics
+│   ├── optimize.py    # Parameter grid search
+│   └── plotting.py    # Signal & equity charts (matplotlib, Agg)
+├── scripts/           # run_backtest.py, param_sweep.py (CLI)
+└── tests/             # pytest suite
 ```
-
-<!-- TODO: Update the structure as files are added -->
-<!-- Example structure for a typical project:
-├── src/               # Source code
-├── tests/             # Test files
-├── docs/              # Documentation
-├── config/            # Configuration files
-├── scripts/           # Build/deployment scripts
-├── package.json       # Dependencies (Node.js)
-└── README.md          # Project documentation
--->
 
 ## Technology Stack
 
-<!-- TODO: Update when technologies are chosen -->
-- **Language:** TBD
-- **Framework:** TBD
-- **Build Tool:** TBD
-- **Testing:** TBD
+- **Language:** Python 3.11
+- **Core libs:** numpy, pandas
+- **Optional:** matplotlib (charts), yfinance (live data), pytest (tests)
+- **Build Tool:** pip + requirements.txt
+- **Testing:** pytest
 
 ## Development Workflow
 
